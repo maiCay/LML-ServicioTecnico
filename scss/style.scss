@@ -415,6 +415,77 @@ main>.hero {
   }
 }
 
+
+// --- PÁGINA CONTACTO ---
+
+.contacto-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.contacto-form-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+.contacto {
+  &__titulo {
+    font-family: $fuente-principal;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $gris-oscuro;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__input {
+    border: 1px solid $borde-footer;
+    background-color: $borde-footer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: $gris-oscuro;
+    padding: 0.75rem 1rem;
+
+    &:focus {
+      border-color: $naranja-menu;
+      box-shadow: 0 0 0 0.2rem rgba(235, 125, 28, 0.15);
+    }
+
+    &::placeholder {
+      color: $gris-suave;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+  }
+
+  &__btn {
+    width: 9rem;
+    background-color: $verde-menta;
+    border: none;
+    color: $gris-oscuro;
+    border-radius: 0.75rem;
+    padding: 0.625rem 2.25rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+
+      &:hover {
+         background: darken($verde-menta, 5%)
+      }
+  }
+}
+
+#toastExito {
+  background-color: $verde-menta;
+  color: $gris-oscuro;
+  font-family: $fuente-principal;
+  font-size: 0.9rem;
+}
+
 // ==========================================
 // 6. FOOTER (Compartido)
 // ==========================================

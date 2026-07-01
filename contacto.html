@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - LML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Contactá a LML para consultas sobre reparación de dispositivos tecnológicos en Santa Fe Capital y Paraná.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lml-serviciotecnico.vercel.app/contacto.html">
+    <meta property="og:title" content="Contacto - LML">
+    <meta property="og:description" content="Escribinos para consultas sobre reparación de dispositivos en Santa Fe y Paraná.">
+    <meta property="og:url" content="https://lml-serviciotecnico.vercel.app/contacto.html">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header navbar navbar-expand-md" id="navbar-placeholder"></header>
+
+<main>
+    <section class="contacto-section py-5">
+        <div class="container">
+            <div class="contacto-form-wrapper mx-auto">
+                <h1 class="contacto__titulo text-center mb-4">Formulario de contacto</h1>
+
+                <form id="contactoForm" class="needs-validation d-grid gap-4" novalidate>
+
+                    <div class="mb-3">
+                        <input type="text"
+                               class="form-control contacto__input"
+                               id="nombre"
+                               placeholder="Ingrese su nombre completo"
+                               required>
+                        <div class="invalid-feedback">
+                            Por favor ingresá tu nombre completo.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email"
+                               class="form-control contacto__input"
+                               id="email"
+                               placeholder="Ingrese su correo electrónico"
+                               required>
+                        <div class="invalid-feedback">
+                            Por favor ingresá un correo electrónico válido.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control contacto__input contacto__textarea"
+                                  id="mensaje"
+                                  placeholder="Escriba un mensaje"
+                                  rows="7"
+                                  required></textarea>
+                        <div class="invalid-feedback">
+                            Por favor escribí un mensaje.
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="cta-button contacto__btn">Enviar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast de confirmación -->
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+    <div id="toastExito" class="toast align-items-center border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                ✅ ¡Mensaje enviado correctamente! Nos pondremos en contacto a la brevedad.
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer id="footer-placeholder" class="main-footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="components.js"></script>
+<script>
+    // Form Validation + Toast
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contactoForm');
+        const toastEl = document.getElementById('toastExito');
+        const toast = new bootstrap.Toast(toastEl);
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            // Formulario válido: mostrar toast y resetear
+            toast.show();
+            form.reset();
+            form.classList.remove('was-validated');
+        });
+    });
+</script>
+</body>
+</html>

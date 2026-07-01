@@ -324,6 +324,69 @@ main > .hero {
   line-height: 1.7;
 }
 
+.contacto-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.contacto-form-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+.contacto__titulo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1F2937;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.contacto__input {
+  border: 1px solid #edf2f7;
+  background-color: #edf2f7;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1F2937;
+  padding: 0.75rem 1rem;
+}
+.contacto__input:focus {
+  border-color: #EB7D1C;
+  box-shadow: 0 0 0 0.2rem rgba(235, 125, 28, 0.15);
+}
+.contacto__input::-moz-placeholder {
+  color: #6B7280;
+}
+.contacto__input::placeholder {
+  color: #6B7280;
+}
+.contacto__textarea {
+  resize: none;
+}
+.contacto__btn {
+  width: 9rem;
+  background-color: #AFF4C6;
+  border: none;
+  color: #1F2937;
+  border-radius: 0.75rem;
+  padding: 0.625rem 2.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.contacto__btn:hover {
+  background: rgb(152.5824175824, 240.9175824176, 182.0274725275);
+}
+
+#toastExito {
+  background-color: #AFF4C6;
+  color: #1F2937;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+}
+
 .main-footer {
   background: #F5F7FA;
   color: #6B7280;
