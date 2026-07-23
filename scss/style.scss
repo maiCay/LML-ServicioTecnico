@@ -13,6 +13,15 @@ $blanco: #ffffff;
 $fondo-secundario: #F5F7FA;
 $borde-footer: #edf2f7; 
 
+//mapeo a las variables de Bootstrap
+$primary:   $naranja-menu;
+$secondary: $gris-suave;
+$success:   #24CA5B;
+$info:      $verde-menta;
+$light:     $fondo-secundario;
+$dark:      $gris-oscuro;
+
+
 $fuente-principal: 'Montserrat', sans-serif;
 $fuente-secundaria: 'Open Sans', sans-serif;
 
@@ -45,6 +54,9 @@ $fuente-secundaria: 'Open Sans', sans-serif;
     @content;
   }
 }
+
+@import "../lib/bootstrap/scss/bootstrap";
+
 
 // ==========================================
 // 3. ESTILOS BASE / RESET
